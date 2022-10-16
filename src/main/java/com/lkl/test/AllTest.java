@@ -1,6 +1,7 @@
 package com.lkl.test;
 
 import com.lkl.sort.Bubble;
+import com.lkl.sort.InsertionSort;
 import com.lkl.sort.Selection;
 import com.lkl.sort.Student;
 import org.junit.jupiter.api.Test;
@@ -49,5 +50,12 @@ public class AllTest {
         Integer[] arr = {4, 6, 8, 7, 9, 2, 10, 1};
         Selection.sort(arr);
         System.out.println(Arrays.toString(arr));
+    }
+
+    @Test
+    public void insertTest() {
+        int[] a = {4, 3, 2, 10, 12, 1, 5, 6};
+        InsertionSort.sort(a);
+        System.out.println(Arrays.toString(a));
     }
 }
