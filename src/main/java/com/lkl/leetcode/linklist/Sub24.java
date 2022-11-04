@@ -19,15 +19,11 @@ public class Sub24 {
         ListNode dummyHead = new ListNode(-1);
         //虚拟头节点next指向真实头节点
         dummyHead.next = head;
-        //从虚拟头节点开始遍历
+        //从虚拟头节点开始遍历 指向需要交换两个节点的前一个节点
         ListNode prev = dummyHead;
-        while (prev != null && prev.next != null) {
+        while (prev.next != null && prev.next.next != null) {
             ListNode cur = prev.next;
             ListNode next = cur.next;
-            //奇数个节点，到最后一个节点直接结束不做交换
-            if (next == null) {
-                break;
-            }
             //记录第二个节点的下一个节点
             ListNode nextNext = next.next;
             //节点交换位置
@@ -47,7 +43,7 @@ public class Sub24 {
         head.next = node1;
         ListNode node2 = new ListNode(3);
         node1.next = node2;
-        node2.next = new ListNode(4);
+//        node2.next = new ListNode(4);
 
         System.out.println(new Sub24().swapPairs(head));
 
