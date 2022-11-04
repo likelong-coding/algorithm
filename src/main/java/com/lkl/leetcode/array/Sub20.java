@@ -6,7 +6,7 @@ import java.util.Stack;
  * @author likelong
  * @date 2022/10/29
  */
-public class sub20 {
+public class Sub20 {
     public boolean isValid(String s) {
         //第一种解法：
         // while(s.contains("()") || s.contains("{}") || s.contains("[]")){

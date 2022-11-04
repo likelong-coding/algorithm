@@ -4,7 +4,7 @@ package com.lkl.leetcode.array;
  * @author likelong
  * @date 2022/10/20
  */
-public class sub704 {
+public class Sub704 {
 
     public int search(int[] nums, int target) {
         //target 小于nums[0] 或 大于nums[nums.length - 1]时 直接返回-1

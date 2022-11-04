@@ -7,7 +7,7 @@ import java.util.Map;
  * @author likelong
  * @date 2022/10/25
  */
-public class sub76 {
+public class Sub76 {
 
     public String minWindow(String s, String t) {
 
@@ -62,6 +62,6 @@ public class sub76 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new sub76().minWindow("ADOBECODEBANC", "ABC"));
+        System.out.println(new Sub76().minWindow("ADOBECODEBANC", "ABC"));
     }
 }

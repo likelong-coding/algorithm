@@ -4,7 +4,7 @@ package com.lkl.leetcode.array;
  * @author likelong
  * @date 2022/10/23
  */
-public class sub209 {
+public class Sub209 {
 
     public int minSubArrayLen(int target, int[] nums) {
 

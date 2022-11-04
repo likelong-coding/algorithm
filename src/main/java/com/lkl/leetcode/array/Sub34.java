@@ -4,7 +4,7 @@ package com.lkl.leetcode.array;
  * @author likelong
  * @date 2022/10/20
  */
-public class sub34 {
+public class Sub34 {
 
     public int[] searchRange(int[] nums, int target) {
         if (nums.length == 0 || target < nums[0] || target > nums[nums.length - 1]) {

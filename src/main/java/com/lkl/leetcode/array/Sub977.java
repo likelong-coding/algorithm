@@ -4,7 +4,7 @@ package com.lkl.leetcode.array;
  * @author likelong
  * @date 2022/10/22
  */
-public class sub977 {
+public class Sub977 {
     public int[] sortedSquares(int[] nums) {
 
         //普通解法：最直观，直接把所有元素的平方直接放到数组里，再用工具类排序

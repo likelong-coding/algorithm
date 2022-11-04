@@ -4,7 +4,7 @@ package com.lkl.leetcode.array;
  * @author likelong
  * @date 2022/10/20
  */
-public class sub367 {
+public class Sub367 {
     public boolean isPerfectSquare(int num) {
         // 第一种：比较好理解，时间复杂度高一点，但是空间复杂度低
         // int i = 1;

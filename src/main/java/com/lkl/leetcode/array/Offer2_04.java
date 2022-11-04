@@ -5,7 +5,7 @@ package com.lkl.leetcode.array;
  * @author likelong
  * @date 2022/11/2
  */
-public class offer2_04 {
+public class Offer2_04 {
 
     public boolean findNumberIn2DArray(int[][] matrix, int target) {
         //行

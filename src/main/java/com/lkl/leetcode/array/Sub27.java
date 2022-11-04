@@ -4,7 +4,7 @@ package com.lkl.leetcode.array;
  * @author likelong
  * @date 2022/10/20
  */
-public class sub27 {
+public class Sub27 {
 
     public int removeElement(int[] nums, int val) {
 

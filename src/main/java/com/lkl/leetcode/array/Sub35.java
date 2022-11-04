@@ -4,7 +4,7 @@ package com.lkl.leetcode.array;
  * @author likelong
  * @date 2022/10/20
  */
-public class sub35 {
+public class Sub35 {
 
     // 升序无重复元素数组 ——> 二分排序解法
     public int searchInsert(int[] nums, int target) {

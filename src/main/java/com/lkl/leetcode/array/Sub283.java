@@ -4,7 +4,7 @@ package com.lkl.leetcode.array;
  * @author likelong
  * @date 2022/10/22
  */
-public class sub283 {
+public class Sub283 {
     public void moveZeroes(int[] nums) {
 
         int j = 0;

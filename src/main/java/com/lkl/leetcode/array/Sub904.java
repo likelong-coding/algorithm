@@ -7,7 +7,7 @@ import java.util.Map;
  * @author likelong
  * @date 2022/10/24
  */
-public class sub904 {
+public class Sub904 {
 
     public int totalFruit(int[] fruits) {
         // key：水果种类 value：对应水果数量

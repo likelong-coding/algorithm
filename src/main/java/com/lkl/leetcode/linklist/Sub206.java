@@ -4,7 +4,7 @@ package com.lkl.leetcode.linklist;
  * @author likelong
  * @date 2022/11/4
  */
-public class sub206 {
+public class Sub206 {
     static class ListNode {
         int val;
         ListNode next;

@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author likelong
  * @date 2022/10/27
  */
-public class sub59 {
+public class Sub59 {
     public static int[][] generateMatrix(int n) {
         int[][] ans = new int[n][n];
 

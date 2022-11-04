@@ -7,7 +7,7 @@ import java.util.List;
  * @author likelong
  * @date 2022/10/28
  */
-public class sub54 {
+public class Sub54 {
 
     public List<Integer> spiralOrder(int[][] matrix) {
         int m = matrix.length;
@@ -53,6 +53,6 @@ public class sub54 {
     public static void main(String[] args) {
         int[][] matrix = {{2, 3, 4}, {5, 6, 7}, {8, 9, 10}, {11, 12, 13}, {14, 15, 16}};
 
-        System.out.println(new sub54().spiralOrder(matrix));
+        System.out.println(new Sub54().spiralOrder(matrix));
     }
 }

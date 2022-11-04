@@ -4,7 +4,7 @@ package com.lkl.leetcode.array;
  * @author likelong
  * @date 2022/11/1
  */
-public class sub203 {
+public class Sub203 {
     public ListNode removeElements(ListNode head, int val) {
         if (head == null) {
             return null;

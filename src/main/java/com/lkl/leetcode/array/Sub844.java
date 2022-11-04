@@ -7,7 +7,7 @@ import java.util.Stack;
  * @author likelong
  * @date 2022/10/22
  */
-public class sub844 {
+public class Sub844 {
     public static boolean backspaceCompare(String s, String t) {
         return getString(s).equals(getString(t));
     }

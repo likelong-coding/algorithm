@@ -4,7 +4,7 @@ package com.lkl.leetcode.array;
  * @author likelong
  * @date 2022/10/20
  */
-public class sub69 {
+public class Sub69 {
 
     //相当于找中间元素，类似二分查找
     public int mySqrt(int x) {

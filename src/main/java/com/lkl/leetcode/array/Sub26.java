@@ -4,7 +4,7 @@ package com.lkl.leetcode.array;
  * @author likelong
  * @date 2022/10/22
  */
-public class sub26 {
+public class Sub26 {
     public int removeDuplicates(int[] nums) {
 
         int j = 0;
