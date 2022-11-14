@@ -10,7 +10,7 @@ public class Sub541 {
 
     public String reverseStr(String s, int k) {
         char[] arr = s.toCharArray();
-        // 左右双指针
+        // 左右双指针 i 左指针 j 右指针
         int j;
         for (int i = 0; i < s.length(); i += 2 * k) {
             j = i + k - 1;
