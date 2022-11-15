@@ -47,7 +47,7 @@ public class Sub151 {
     }
 
     /**
-     * 大神们的做法
+     * 大神们的做法三部曲
      * 1、删除多余空格
      * 2、反转字符串
      * 3、将字符串中每个单词再次反转
@@ -61,7 +61,7 @@ public class Sub151 {
     /**
      * 移除多余空格
      */
-    public String removeExtraSpaces(String s){
+    public String removeExtraSpace(String s){
         StringBuilder sb = new StringBuilder();
         char[] chars = s.toCharArray();
 
