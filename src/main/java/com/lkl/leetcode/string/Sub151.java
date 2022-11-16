@@ -54,25 +54,62 @@ public class Sub151 {
      * 得到最后结果
      */
     public String reverseWords1(String s) {
+        String newStr = removeExtraSpace(s);
+        char[] chars = newStr.toCharArray();
 
-        return null;
+        //双指针寻找字符串中单词
+        int j;
+        for (int i = 0; i < chars.length; i++) {
+            //不以 ' ' 开头，' '结束 刚好是一个单词
+            if (chars[i] != ' ') {
+                j = i;
+                while (j < chars.length) {
+                    char ch = chars[j];
+                    if (ch == ' ') {
+                        break;
+                    }
+                    j++;
+                }
+                //此时j指针已经指向' '
+                swap(chars, i, j - 1);
+                i = j;
+            }
+        }
+
+        //反转完字符串里的单词后，最后将整个字符串反转就得到想要的结果
+        swap(chars, 0 , chars.length - 1);
+        return new String(chars);
     }
 
     /**
      * 移除多余空格
      */
-    public String removeExtraSpace(String s){
+    public String removeExtraSpace(String s) {
         StringBuilder sb = new StringBuilder();
         char[] chars = s.toCharArray();
 
-        //
-        int start = 0;
-        int end;
+        //双指针寻找字符串中单词
+        int j;
         for (int i = 0; i < chars.length; i++) {
-
+            //不以 ' ' 开头，' '结束 刚好是一个单词
+            if (chars[i] != ' ') {
+                j = i;
+                //最后一个单词后面可能没有空格
+                while (j < chars.length) {
+                    char ch = chars[j];
+                    if (ch == ' ') {
+                        break;
+                    }
+                    j++;
+                    sb.append(ch);
+                }
+                sb.append(" ");
+                i = j;
+            }
         }
 
-        return null;
+        //去掉最后一个空格
+        return sb.substring(0, sb.length() - 1);
     }
 
     /**
@@ -91,6 +128,6 @@ public class Sub151 {
 
     @Test
     public void test() {
-        System.out.println(reverseWords("  hello world  "));
+        System.out.println(reverseWords1("  hello  world    my  name       is"));
     }
 }
