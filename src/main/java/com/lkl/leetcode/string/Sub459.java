@@ -9,6 +9,10 @@ import org.junit.jupiter.api.Test;
 public class Sub459 {
     public boolean repeatedSubstringPattern(String s) {
 
+        if (s.length() == 1) {
+            return false;
+        }
+
         StringBuilder sub = new StringBuilder();
         //获得子串
         for (int i = 0; i < s.length(); i++) {
@@ -23,26 +27,19 @@ public class Sub459 {
         }
 
 
-        for (int loop = sub.length(); loop < s.length(); loop += sub.length()) {
-            int i = loop;
-            int j = 0;
-
-            while (j < sub.length() && s.charAt(i) == sub.charAt(j)) {
-                i++;
-                j++;
-            }
-
-            if (s.charAt(i - 1) != sub.charAt(j - 1)) {
-                return false;
+        for (int i = sub.length(); i < s.length(); ) {
+            for (int j = 0; j < sub.length(); ) {
+                if (s.charAt(i++) != sub.charAt(j++)) {
+                    return false;
+                }
             }
         }
-
 
         return true;
     }
 
     @Test
     public void test() {
-        System.out.println(repeatedSubstringPattern("abac"));
+        System.out.println(repeatedSubstringPattern("abaaba"));
     }
 }
