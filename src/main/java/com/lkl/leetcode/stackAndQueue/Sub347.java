@@ -12,6 +12,10 @@ public class Sub347 {
 
     public int[] topKFrequent(int[] nums, int k) {
         int[] ans = new int[k];
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
         return ans;
     }
 
