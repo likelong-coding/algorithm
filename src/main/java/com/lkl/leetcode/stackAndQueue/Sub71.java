@@ -10,31 +10,49 @@ public class Sub71 {
 
     public String simplifyPath(String path) {
 
-        StringBuilder sb = new StringBuilder();
+        String[] arr = path.split("/");
 
-        char[] ch = path.toCharArray();
-        for (int i = 0; i < ch.length; ) {
-            char c = ch[i];
-            if (c != '.') {
-                sb.append(c);
-            } else {
-//                if ()
+        //存放目录
+//        Stack<String> stack = new Stack<>();
+//        for (String s : arr) {
+//            if ("..".equals(s) && !stack.isEmpty()) {
+//                stack.pop();
+//            }
+//
+//            if (!".".equals(s) && !"..".equals(s) && !"".equals(s)) {
+//                stack.push(s);
+//            }
+//        }
+//        StringBuilder ans = new StringBuilder();
+//        while (!stack.isEmpty()) {
+//            ans.insert(0, stack.pop());
+//            ans.insert(0, "/");
+//
+//        }
+//        if (ans.length() == 0) {
+//            return "/";
+//        }
 
-                if (sb.length() - 1 > 0) {
-                    sb.deleteCharAt(sb.length() - 1);
-                }
+        // StringBuilder充当栈
+        StringBuilder ans = new StringBuilder();
+        for (String s : arr) {
+            if ("..".equals(s) && ans.length() > 0) {
+                ans.delete(ans.lastIndexOf("/"), ans.length());
             }
-            i++;
+
+            if (!".".equals(s) && !"..".equals(s) && !"".equals(s)) {
+                ans.append("/").append(s);
+            }
         }
 
-        if (ch.length - 1 > 1 && sb.charAt(sb.length() - 1) == '/') {
-            sb.deleteCharAt(sb.length() - 1);
+        if (ans.length() == 0) {
+            return "/";
         }
-        return sb.toString();
+        return ans.toString();
     }
 
     @Test
     public void test() {
-        System.out.println(simplifyPath("/../"));
+        System.out.println(simplifyPath("/a/./b/._././c/"));
     }
 }
