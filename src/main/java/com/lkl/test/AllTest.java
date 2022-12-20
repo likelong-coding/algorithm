@@ -58,4 +58,5 @@ public class AllTest {
         InsertionSort.sort(a);
         System.out.println(Arrays.toString(a));
     }
+
 }
