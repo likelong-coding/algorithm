@@ -2,6 +2,8 @@ package com.lkl.leetcode.tree;
 
 /**
  * 验证二叉搜索树，二叉搜索树中序遍历，节点值依次递增
+ *
+ * `中序遍历二叉搜索树等于遍历有序递增数组`
  * @author likelong
  * @date 2022/12/21
  */
