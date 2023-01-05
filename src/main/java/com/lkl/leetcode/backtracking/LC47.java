@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * 全排列Ⅱ
+ * used数组，标记元素有没有被用过，用过了就不再用了直接跳过
  * @author likelong
  * @date 2023/1/4
  */
