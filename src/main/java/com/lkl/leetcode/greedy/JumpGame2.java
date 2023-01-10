@@ -10,8 +10,11 @@ public class JumpGame2 {
 
     public int jump(int[] nums) {
 
-        // 能覆盖的范围
-        int cover = 0;
+        /*
+        在当前可跳跃范围内，找到最大的跳跃范围，达到当前跳跃范围边界，替换跳跃范围【找到的最大的跳跃范围替换当前可跳跃范围】，
+        跳跃次数 + 1，直到超过最后一个元素的下标
+         */
+
         // 跳跃次数
         int jump = 0;
 
@@ -20,20 +23,25 @@ public class JumpGame2 {
             return jump;
         }
 
-        for (int i = 0; i <= cover; i++) {
-            // 找到覆盖范围内，更大的覆盖范围
-            if (cover < (i + nums[i])) {
-                cover = i + nums[i];
-                // 覆盖范围更大了，此时跳跃次数 + 1
-                jump++;
-            }
+        // 当前能跳跃的距离
+        int curJumpDistance = 0;
+        // 在当前跳跃范围内找到最大的跳跃范围
+        int maxJumpDistance = 0;
 
-            // 只要能覆盖到最后一个元素下标，直接返回既最小跳跃次数
-            if (cover >= nums.length - 1) {
-                return jump;
+        for (int i = 0; i < nums.length; i++) {
+            // 当前跳跃范围内找到最大的跳跃范围
+            maxJumpDistance = Math.max(maxJumpDistance, i + nums[i]);
+
+            // 达到当前跳跃范围边界
+            if (i == curJumpDistance) {
+                jump++;
+                curJumpDistance = maxJumpDistance;
+
+                if(curJumpDistance >= nums.length - 1){
+                    break;
+                }
             }
         }
-
         return jump;
     }
 }
