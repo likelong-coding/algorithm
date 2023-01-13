@@ -1,6 +1,7 @@
-package com.lkl.leetcode.array;
+package com.lkl.leetcode.linklist;
 
 /**
+ * 移除链表元素
  * @author likelong
  * @date 2022/11/1
  */
