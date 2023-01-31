@@ -59,4 +59,51 @@ public class AllTest {
         System.out.println(Arrays.toString(a));
     }
 
+    /**
+     * 快速排序
+     */
+    public void quickSort(int[] arr, int l, int r) {
+        if (l >= r) {
+            return;
+        }
+
+        int left = l;
+        int right = r;
+
+        int pivot = arr[left];
+        while (left < right) {
+            while (left < right && arr[right] >= pivot) {
+                right--;
+            }
+
+            if (left < right) {
+                arr[left] = arr[right];
+            }
+
+            while (left < right && arr[left] <= pivot) {
+                left++;
+            }
+
+            if (left < right) {
+                arr[right] = arr[left];
+            }
+
+            // 放置pivot到该索引位置
+            if (left >= right) {
+                arr[left] = pivot;
+            }
+        }
+
+        quickSort(arr, l, left - 1);
+        quickSort(arr, left + 1, r);
+    }
+
+
+    @Test
+    public void testQuickSort() {
+        int[] arr = new int[]{9, 1, -1, 11, 45, 32, 57, 68, 31, 21, 11, 6};
+        quickSort(arr, 0, arr.length - 1);
+        System.out.println(Arrays.toString(arr));
+    }
+
 }
