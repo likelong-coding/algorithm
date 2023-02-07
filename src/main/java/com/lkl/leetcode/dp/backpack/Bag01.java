@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 /**
+ * 纯0-1背包代码实现
  * @author likelong
  * @date 2023/2/2
  */
